@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start" : "npx prisma migrate dev",
+    "start" : "node src/index.js",
     "dev": "nodemon src/index.js"
   },
   "keywords": [],
