@@ -1,24 +1,25 @@
 {
-  "name": "back-end",
+  "name": "backendexample",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start" : "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AleSGXRD/BackendExample.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@prisma/client": "^5.0.0",
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.1"
+  "bugs": {
+    "url": "https://github.com/AleSGXRD/BackendExample/issues"
   },
-  "devDependencies": {
-    "nodemon": "^3.0.1",
-    "prisma": "^5.0.0"
+  "homepage": "https://github.com/AleSGXRD/BackendExample#readme",
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
