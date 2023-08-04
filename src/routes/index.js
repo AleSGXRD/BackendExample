@@ -14,14 +14,8 @@ router.post('/newuser', controller.createUser);
 
 router.put('/:id', controller.updateUser);
 
-router.get('/ping', async (req,res)=>{
-    const result = await pool.query('SELECT NOW()')
-    return res.json(result.rows[0]);
-})
+router.get('/ping', controller.ping)
 
-router.get('/createTable', async (req,res)=>{
-    const result = await pool.query("CREATE TABLE users (id SERIAL PRIMARY KEY,name VARCHAR(40),email TEXT);");
-    return res.send('Table created');
-})
+router.get('/createTable', controller.createTable)
 
 export default router;
