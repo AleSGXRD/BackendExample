@@ -13,7 +13,7 @@ const app = express()
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
-app.get('test', async (req,res)=>{
+app.get('/test', async (req,res)=>{
     res.send('test');
 })
 
