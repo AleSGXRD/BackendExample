@@ -60,9 +60,29 @@ app.get('/users', async (req,res)=>{
     const response = await pool.query('SELECT * FROM users');
     console.log(response.rows);
     res.status(200).json(response.rows);
- })
+})
+app.get('/user', async (req,res)=>{
+    const response = await pool.query('SELECT * FROM User');
+    console.log(response.rows);
+    res.status(200).json(response.rows);
+})
+app.get('/client', async (req,res)=>{
+    const response = await pool.query('SELECT * FROM Client');
+    console.log(response.rows);
+    res.status(200).json(response.rows);
+})
 
 
+app.get('/order', async (req,res)=>{
+    const response = await pool.query('SELECT * FROM Order');
+    console.log(response.rows);
+    res.status(200).json(response.rows);
+})
+app.get('/orderfinished', async (req,res)=>{
+    const response = await pool.query('SELECT * FROM OrderFinished');
+    console.log(response.rows);
+    res.status(200).json(response.rows);
+})
 app.listen(3000)
 console.log('Server on port:', 3000);
 
