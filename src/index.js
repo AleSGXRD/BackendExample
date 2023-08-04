@@ -20,6 +20,10 @@ app.get('/ping',  async (req,res)=>{
     const result = await pool.query('SELECT NOW()')
     return res.json(result.rows[0]);
 })
+app.get('/createtable',async (req,res)=>{
+    const result = await pool.query("CREATE TABLE users (id SERIAL PRIMARY KEY,name VARCHAR(40),email TEXT);");
+    return res.send('Table created');
+})
 
 
 app.listen(3000)
