@@ -11,7 +11,7 @@ const pool = new pg.Pool({
     database:'exampledb_v5uo',
     port:'5432'
 })
-console.log(!!pool? 'DB connected': 'DB disconected');
+console.log(!pool? 'DB connected': 'DB disconected');
 
 const getUsers = async (req,res)=>{
    const response = await pool.query('SELECT * FROM users');
