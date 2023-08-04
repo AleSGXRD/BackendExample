@@ -1,10 +1,10 @@
 import pg from 'pg'
 
 const pool = new pg.Pool({
-    host:'localhost',
-    user:'postgres',
-    password:"aleconga3.0",
-    database:'firstapi',
+    host:'dpg-cj5eetgeba7s73aa0f6g-a',
+    user:'alexrd',
+    password:"A7bfrm9e7cJFIdDIkw85WZYluXkzXzLQ",
+    database:'exampledb_v5uo',
     port:'5432',
     connectionString: process.env.DATABASE_URL
 })
