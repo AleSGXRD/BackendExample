@@ -18,4 +18,8 @@ router.get('/ping', controller.ping)
 
 router.get('/createtable', controller.createTable)
 
+router.get('/test', (req,res)=>{
+    res.send('funciona');
+})
+
 export default router;
