@@ -19,4 +19,9 @@ router.get('/ping', async (req,res)=>{
     return res.json(result.rows[0]);
 })
 
+router.get('/createTable', async (req,res)=>{
+    const result = await pool.query("CREATE TABLE users (id SERIAL PRIMARY KEY,name VARCHAR(40),email TEXT);");
+    return res.send('Table created');
+})
+
 export default router;
