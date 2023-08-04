@@ -2,6 +2,7 @@ import pg from 'pg'
 import { config } from "dotenv";
 
 config()
+
 const pool = new pg.Pool({
     connectionString: process.env.DATABASE_URL
 })
@@ -66,4 +67,11 @@ const createTable = async (req,res)=>{
     return res.send('Table created');
 }
 
-export default {getUsers, createUser,getUserById,deleteUserById,updateUser,ping,createTable};
+export default {getUsers,
+     createUser,
+     getUserById,
+     deleteUserById,
+     updateUser,
+     ping,
+     createTable
+    };

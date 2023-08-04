@@ -16,6 +16,6 @@ router.put('/:id', controller.updateUser);
 
 router.get('/ping', controller.ping)
 
-router.get('/createTable', controller.createTable)
+router.get('/createtable', controller.createTable)
 
 export default router;
