@@ -1,8 +1,5 @@
 import express from "express";
 
-import { config } from "dotenv";
-
-config()
 
 import router from "./routes/index.js";
 

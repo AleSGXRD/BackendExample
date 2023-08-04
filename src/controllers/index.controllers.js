@@ -1,15 +1,14 @@
 import pg from 'pg'
+import { config } from "dotenv";
+
+config()
 
 /*const pool = new pg.Pool({
     connectionString: process.env.DATABASE_URL
 })*/
 
 const pool = new pg.Pool({
-    host:'dpg-cj5eetgeba7s73aa0f6g-a',
-    user:'alexrd',
-    password:"A7bfrm9e7cJFIdDIkw85WZYluXkzXzLQ",
-    database:'exampledb_v5uo',
-    port:'5432'
+    connectionString: process.env.DATABASE_URL
 })
 console.log(!pool? 'DB connected': 'DB disconected');
 
